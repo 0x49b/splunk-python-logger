@@ -23,7 +23,7 @@ SPLUNK_DEBUG = False
 SPLUNK_RETRY_COUNT = 1
 SPLUNK_RETRY_BACKOFF = 0.1
 
-RECEIVER_URL = 'https://%s:%s/services/collector' % (SPLUNK_HOST, SPLUNK_PORT)
+RECEIVER_URL = 'https://%s:%s/services/collector/event' % (SPLUNK_HOST, SPLUNK_PORT)
 
 
 class TestSplunkHandler(unittest.TestCase):
@@ -70,7 +70,7 @@ class TestSplunkHandler(unittest.TestCase):
         self.assertEqual(self.splunk.retry_backoff, SPLUNK_RETRY_BACKOFF)
 
         self.assertFalse(logging.getLogger('requests').propagate)
-        self.assertFalse(logging.getLogger('splunk_handler').propagate)
+        self.assertFalse(logging.getLogger('splunk_python_logger').propagate)
 
     def test_splunk_worker(self):
         # Silence root logger
