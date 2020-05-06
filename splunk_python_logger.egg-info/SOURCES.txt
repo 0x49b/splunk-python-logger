@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+splunk_python_logger/__init__.py
+splunk_python_logger.egg-info/PKG-INFO
+splunk_python_logger.egg-info/SOURCES.txt
+splunk_python_logger.egg-info/dependency_links.txt
+splunk_python_logger.egg-info/requires.txt
+splunk_python_logger.egg-info/top_level.txt

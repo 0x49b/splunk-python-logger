@@ -1,16 +1,24 @@
 from setuptools import setup
+import pathlib
+
+# The directory containig this file
+HERE = pathlib.Path(__file__).parent
+
+# The README File
+README = (HERE / "readme.md").read_text()
 
 setup(
     name='splunk_python_logger',
-    version='2.2.0',
-    license='MIT License',
-    description='A Python logging Handler ro send events to SplunkEnterprise running the Splunk HTTP Event Collector.',
-    long_description=open('README.md').read(),
+    version='1.0.1',
+    license='MIT',
+    description='A Python logging Handler to send events to SplunkEnterprise running the Splunk HTTP Event Collector.',
+    long_description=README,
     long_description_content_type='text/markdown',
     author='Florian Thiévent',
     author_email='florian@lichtwellenreiter.org',
     url='https://github.com/lichtwellenreiter/splunk-python-logger',
     packages=['splunk_python_logger'],
+    include_package_data =True,
     install_requires=['requests >= 2.6.0, < 3.0.0'],
     classifiers=[
         'Development Status :: 4 - Beta',
