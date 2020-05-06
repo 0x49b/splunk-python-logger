@@ -9,7 +9,7 @@ README = (HERE / "readme.md").read_text()
 
 setup(
     name='splunk_python_logger',
-    version='1.0.1',
+    version='1.1.0',
     license='MIT',
     description='A Python logging Handler to send events to SplunkEnterprise running the Splunk HTTP Event Collector.',
     long_description=README,
